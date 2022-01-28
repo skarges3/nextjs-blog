@@ -1,0 +1,18 @@
+@tailwind base;
+@layer base {
+  summary {
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  a {
+    @apply text-blue-800 underline underline-offset-1
+  }
+}
+@tailwind components;
+@tailwind utilities;
