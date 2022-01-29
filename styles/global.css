@@ -1,5 +1,8 @@
 @tailwind base;
 @layer base {
+  html {
+    @apply bg-stone-200 dark:bg-stone-900 dark:text-stone-100 text-stone-900
+  }
   summary {
     cursor: pointer;
     list-style: none;
@@ -11,7 +14,11 @@
   }
 
   a {
-    @apply text-blue-800 underline underline-offset-1
+    @apply text-orange-800 underline underline-offset-1 dark:text-orange-500
+  }
+
+  li::marker {
+    @apply text-orange-800 dark:text-orange-500
   }
 }
 @tailwind components;
