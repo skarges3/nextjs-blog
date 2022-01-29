@@ -18,12 +18,12 @@ export default function Post({
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article className='space-y-4 py-8'>
-        <h1 className='text-5xl font-black'>{postData.title}</h1>
-        <p className='text-black text-opacity-50'>
+      <article className='prose-stone dark:prose-invert prose-ul:list-disc prose-li:marker:text-orange-800 mx-auto mt-12 prose prose-lg'>
+        <h1 className='font-black'>{postData.title}</h1>
+        <p>
           <Date dateString={postData.date} />
         </p>
-        <div className='prose-lg' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className='' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>
   )
