@@ -1,7 +1,7 @@
 @tailwind base;
 @layer base {
   html {
-    @apply bg-stone-200 dark:bg-stone-900 dark:text-stone-100 text-stone-900
+    @apply bg-stone-200 dark:bg-stone-900 dark:text-stone-100 text-stone-900 scroll-smooth
   }
   summary {
     cursor: pointer;
