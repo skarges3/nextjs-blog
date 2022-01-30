@@ -7,6 +7,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeStringify from 'rehype-stringify'
 import rehypeSlug from 'rehype-slug'
 import rehypeFigure from 'rehype-figure'
+import rehypeExternalLinks from 'rehype-external-links'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -64,6 +65,7 @@ export async function getPostData(id: string) {
     .use(rehypeFigure)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings)
+    .use(rehypeExternalLinks, {target: "_blank", rel: ['external']})
     .use(rehypeStringify)
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
