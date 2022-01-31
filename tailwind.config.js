@@ -4,7 +4,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ['Syne', 'ui-sans-serif', 'system-ui', -'apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+    },
   },
   plugins: [
     require("@tailwindcss/typography"),

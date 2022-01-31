@@ -28,7 +28,7 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string })
+      ...(matterResult.data as { date: string; title: string; excerpt: string })
     }
   })
   // Sort posts by date
@@ -65,7 +65,7 @@ export async function getPostData(id: string) {
     .use(rehypeFigure)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings)
-    .use(rehypeExternalLinks, {target: "_blank", rel: ['external']})
+    .use(rehypeExternalLinks, {target: "_blank", rel: ['noreferrer', 'noopener']})
     .use(rehypeStringify)
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
@@ -74,6 +74,6 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string })
+    ...(matterResult.data as { date: string; title: string; excerpt: string })
   }
 }

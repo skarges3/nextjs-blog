@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const name = 'Spencer Karges'
 const profilePic = '/images/profile.jpeg'
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'From the Desk of Spencer Karges'
 
 export default function Layout({
   children,
@@ -14,21 +14,24 @@ export default function Layout({
   home?: boolean
 }) {
   return (
-    <div className="max-w-screen-lg px-4 mx-auto my-12">
+    <div className="max-w-prose px-4 mx-auto my-12 font-sans text-lg">
+      <a className='focus:not-sr-only focus:absolute focus:p-4 font-bold text-black no-underline bg-white sr-only' href='#content'>Skip to content</a>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="https://fav.farm/🔰" />
+        <link rel="mask-icon" href="https://fav.farm/🔰" color="#ff0000" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Thoughts on sundry topics, including but not limited to web development, CSS, HTML, public policy."
         />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
             siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
       </Head>
       <header className='mb-8 text-center'>
         {home ? (
@@ -65,7 +68,7 @@ export default function Layout({
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main id="content">{children}</main>
       {!home && (
         <div>
           <Link href="/">

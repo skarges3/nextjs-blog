@@ -1,6 +1,7 @@
 ---
 title: 'Not Another "Why I Like Tailwind" Post'
 date: '2022-01-30'
+excerpt: 'A cover song of a cover song.'
 ---
 
 As previously advised, don't listen to me because [I do not know what I think or what I am doing](/posts/hello-world). So for my first foray into this type of webdev writing, I'm gonna cover a modern classic: the Tailwind take.
@@ -13,9 +14,7 @@ Tailwind is fast becoming the dominant CSS "framework" (see chart below), though
 
 Library: "Here are some tiny building blocks." *vs.* Framework: "Here are some components that you can re-skin."
 
-![A chart from "The State of CSS: 2021" showing Tailwind adoption on the rise, with 6% adoption in 2019, 26% in 2020, and 39% in 2021.](/posts/tailwind-chart.png)](/posts/tailwind-chart.png)
-
-Source: https://2021.stateofcss.com/en-US/technologies/css-frameworks
+![A chart from "The State of CSS: 2021" showing Tailwind adoption on the rise, with 6% adoption in 2019, 26% in 2020, and 39% in 2021. Source: https://2021.stateofcss.com/en-US/technologies/css-frameworks](/posts/tailwind-chart.png)](/posts/tailwind-chart.png)
 
 The Tailwind team (or maybe just whoever wrote the copy for their new site) calls it a ["utility-first CSS framework"](https://tailwindcss.com/), but I think that's just a word-of-least-resistance.
 
