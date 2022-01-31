@@ -75,6 +75,9 @@ export default function Layout({
           </Link>
         </div>
       )}
+      <footer>
+        <Link href='/rss.xml' ><a>RSS</a></Link>
+      </footer>
     </div>
   )
 }

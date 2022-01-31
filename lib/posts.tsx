@@ -8,6 +8,7 @@ import rehypeStringify from 'rehype-stringify'
 import rehypeSlug from 'rehype-slug'
 import rehypeFigure from 'rehype-figure'
 import rehypeExternalLinks from 'rehype-external-links'
+import rehypeHighlight from 'rehype-highlight'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -64,6 +65,7 @@ export async function getPostData(id: string) {
     .use(remarkRehype)
     .use(rehypeFigure)
     .use(rehypeSlug)
+    .use(rehypeHighlight)
     .use(rehypeAutolinkHeadings)
     .use(rehypeExternalLinks, {target: "_blank", rel: ['noreferrer', 'noopener']})
     .use(rehypeStringify)
