@@ -24,7 +24,7 @@ export default function Post({
         />
       </Head>
       <article className='prose-stone dark:prose-invert prose-ul:list-disc prose-li:marker:text-orange-800 mx-auto my-12 prose prose-lg'>
-        <h1 className='font-black'>{postData.title}</h1>
+        <h1 className='min-w-0 font-black break-words'>{postData.title}</h1>
         <p>
           <Date dateString={postData.date} />
         </p>
