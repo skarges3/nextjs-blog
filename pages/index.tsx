@@ -1,6 +1,5 @@
-import Head from 'next/head'
 import fs from 'fs'
-import Layout, { siteTitle } from '../components/layout'
+import Layout from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
 import { generateRss } from '../lib/rss'
 import Link from 'next/link'
@@ -19,10 +18,6 @@ export default function Home({
 }) {
   return (
     <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-        <meta name="description" content="Thoughts on sundry topics, including but not limited to web development, CSS, HTML, public policy." />
-      </Head>
       <section className='my-12 space-y-4'>
         <h2 className='font-bold tracking-widest uppercase'>Intro</h2>
         <p>Hi. I&rsquo;m Spencer Karges.</p>

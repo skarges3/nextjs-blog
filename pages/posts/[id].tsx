@@ -18,7 +18,10 @@ export default function Post({
     <Layout>
       <Head>
         <title>{postData.title}</title>
-        <meta content="Thoughts on sundry topics, including but not limited to web development, CSS, HTML, public policy." />
+        <meta
+          name="description"
+          content={postData.excerpt}
+        />
       </Head>
       <article className='prose-stone dark:prose-invert prose-ul:list-disc prose-li:marker:text-orange-800 mx-auto my-12 prose prose-lg'>
         <h1 className='font-black'>{postData.title}</h1>

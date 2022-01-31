@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
+import { BLOG_TITLE } from '../lib/constants'
 import { getSortedPostsData } from '../lib/posts'
 import { GetStaticProps } from 'next'
 
@@ -17,8 +18,7 @@ export default function FourZeroFour({
   return (
     <Layout>
       <Head>
-        <title>404: Not Found - {siteTitle}</title>
-        <meta name="description" content="Thoughts on sundry topics, including but not limited to web development, CSS, HTML, public policy." />
+        <title>404: Not Found - {BLOG_TITLE}</title>
       </Head>
       <section className='prose-stone dark:prose-invert my-12 prose prose-xl'>
         <h1 className='font-bold tracking-widest uppercase'>404: Not Found</h1>

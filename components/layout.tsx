@@ -1,10 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-
-const name = 'Spencer Karges'
+import { BLOG_TITLE, BLOG_SUBTITLE } from '../lib/constants'
 const profilePic = '/images/profile.jpeg'
-export const siteTitle = 'From the Desk of Spencer Karges'
 
 export default function Layout({
   children,
@@ -19,17 +17,18 @@ export default function Layout({
       <Head>
         <link rel="icon" type="image/svg+xml" href="https://fav.farm/🔰" />
         <link rel="mask-icon" href="https://fav.farm/🔰" color="#ff0000" />
+        <title>{BLOG_TITLE}</title>
         <meta
           name="description"
-          content="Thoughts on sundry topics, including but not limited to web development, CSS, HTML, public policy."
+          content={BLOG_SUBTITLE}
         />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
+            BLOG_TITLE
             )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
-        <meta name="og:title" content={siteTitle} />
+        <meta name="og:title" content={BLOG_TITLE} />
         <meta name="twitter:card" content="summary_large_image" />
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
       </Head>
@@ -42,9 +41,9 @@ export default function Layout({
               src={profilePic}
               height={144}
               width={144}
-              alt={name}
+              alt="Profile Pic, Me Smiling"
             />
-            <h1>{name}</h1>
+            <h1>{BLOG_TITLE}</h1>
           </>
         ) : (
           <>
@@ -56,13 +55,13 @@ export default function Layout({
                   src={profilePic}
                   height={108}
                   width={108}
-                  alt={name}
+                  alt="Profile Pic, Me Smiling"
                 />
               </a>
             </Link>
             <h2>
               <Link href="/">
-                <a>{name}</a>
+                <a>{BLOG_TITLE}</a>
               </Link>
             </h2>
           </>

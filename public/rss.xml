@@ -1,9 +1,9 @@
 
     <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
       <channel>
-        <title>Spencer Karges</title>
+        <title>From the Desk of Spencer Karges</title>
         <link>https://www.karges.org</link>
-        <description>Dev blog</description>
+        <description>Thoughts on sundry topics, including but not limited to web development, CSS, HTML, and sometimes public policy.</description>
         <language>en</language>
         <lastBuildDate>Sun, 30 Jan 2022 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://www.karges.org" rel="self" type="application/rss+xml"/>
