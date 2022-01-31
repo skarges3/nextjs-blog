@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
+import Layout from '../components/layout'
 import { BLOG_TITLE } from '../lib/constants'
 import { getSortedPostsData } from '../lib/posts'
 import { GetStaticProps } from 'next'
