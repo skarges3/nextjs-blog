@@ -1,3 +1,5 @@
 {
-    "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "headwind.prependCustomClasses": true,
+  "headwind.runOnSave": true
 }
