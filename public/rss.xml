@@ -5,9 +5,67 @@
         <link>https://www.karges.org</link>
         <description>Thoughts on sundry topics, including but not limited to web development, CSS, HTML, and sometimes public policy.</description>
         <language>en</language>
-        <lastBuildDate>Sun, 30 Jan 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 12 Feb 2022 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://www.karges.org" rel="self" type="application/rss+xml"/>
         
+    <item>
+      <guid>https://www.karges.org/posts/out-of-the-headwind</guid>
+      <title>Out of the Headwind</title>
+      <description>The Tailwind team was on it, and I just didn't notice.</description>
+      <link>https://www.karges.org/posts/out-of-the-headwind</link>
+      <pubDate>Sat, 12 Feb 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Following up on <a href="/posts/into-the-headwind">a recent post about Headwind</a>: some new developments in this space.</p>
+<p>God bless RSS is all I have to say. If it weren't for that reliable feed, I would not have noticed that the Tailwind team posted this great update on <a href="https://tailwindcss.com/blog/automatic-class-sorting-with-prettier" target="_blank" rel="noreferrer noopener">Automatic Class Sorting with Prettier</a>. Their post predates my post on Headwind :)</p>
+<h2 id="the-good"><a aria-hidden="true" tabindex="-1" href="#the-good"><span class="icon icon-link"></span></a>The Good</h2>
+<p>The advantages over Headwind are pretty obvious, I think:</p>
+<ul>
+<li>Integration with a larger ecosystem</li>
+<li>Support from the official Tailwind team</li>
+<li>Most importantly: a uniform class order across the web</li>
+</ul>
+<p>The first two there are pretty obvious, but I think this last one has the potential to help the Tailwind ecosystem really mature. For example, when I use Tailwind on a project and invite another developer into it, I can definitely add a <code>.vscode</code> folder to the repo with Headwind as a recommendation in <code>extensions.json</code>:</p>
+<pre><code class="language-json">// .vscode/extensions.json
+{
+  "recommendations": [
+    "heybourn.headwind"
+  ]
+}
+</code></pre>
+<p>And then in <code>settings.json</code>:</p>
+<pre><code class="language-json">// .vscode/settings.json
+{
+  // ...other stuff...
+  // These settings help standardize Headwind.
+  "headwind.prependCustomClasses": true,
+  "headwind.runOnSave": true
+}
+</code></pre>
+<p>Whereas the set-up requires VSCode and some non-standard settings, the Prettier version, as Adam and Jonathan put it:</p>
+<blockquote>
+<p>...works seamlessly with custom Tailwind configurations, and because it’s just a Prettier plugin, it works anywhere Prettier works — including every popular editor and IDE, and of course on the command line.</p>
+</blockquote>
+<p>🎉 Thanks Tailwind team!</p>
+<h2 id="the-not-as-good-yet"><a aria-hidden="true" tabindex="-1" href="#the-not-as-good-yet"><span class="icon icon-link"></span></a>The Not-as-Good-Yet</h2>
+<p>This is new, so there are plenty of kinks to work out. The main issue I'm experiencing at the moment is <a href="https://github.com/tailwindlabs/prettier-plugin-tailwindcss/issues/31" target="_blank" rel="noreferrer noopener">incompatibility with other Prettier plugins</a>, specifically the <code>prettier-plugin-twig-melody</code> plugin since I'm working on a Twig-based project. I'm sure that'll be patched up soon, but just something to keep in mind before you make the switch.</p>
+<p>Really excited about making this part of using Tailwind smoother and more consistent.</p>]]></content:encoded>
+    </item>
+  
+    <item>
+      <guid>https://www.karges.org/posts/into-the-headwind</guid>
+      <title>Into the Headwind</title>
+      <description>How to stay sane with Tailwind Class Soup, especially if you're working on a team.</description>
+      <link>https://www.karges.org/posts/into-the-headwind</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>As <a href="/posts/not-another-tailwind-post">mentioned before,</a>, I really like Tailwind CSS.</p>
+<p>One of the downsides that I have encountered is the class soup that can occur. For example:</p>
+<p><code>&#x3C;div class="relative after:absolute after:left-0 after:bottom-0 after:w-full after:content-[''] after:bg-black after:h-px after:scale-x-0 hover:after:scale-x-50 after:transition-transform">&#x3C;/div></code></p>
+<p>There really is no way around this type of thing if you want to use Tailwind. Again, I think it's still worth it but one small way to mitigate this is to enforce some rules for the order of the class names.</p>
+<p>The tool for this job is a VS Code Extension called <a href="https://github.com/heybourn/headwind" target="_blank" rel="noreferrer noopener">Headwind</a>.</p>
+<p>It works by re-ordering your classes on save according to a preset order (which is configurable).</p>
+<p>It will also remove duplicates!</p>
+<p>Thanks to the Headwind team for this little tool. &#x3C;3</p>]]></content:encoded>
+    </item>
+  
     <item>
       <guid>https://www.karges.org/posts/not-another-tailwind-post</guid>
       <title>Not Another "Why I Like Tailwind" Post</title>

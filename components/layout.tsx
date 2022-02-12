@@ -69,14 +69,26 @@ export default function Layout({
       </header>
       <main id="content">{children}</main>
       {!home && (
-        <div>
+        <div className='py-4 my-4'>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
       )}
       <footer>
-        <Link href='/rss.xml' ><a>RSS</a></Link>
+        <nav>
+          <ul className='flex gap-4 text-sm'>
+            <li>
+              <Link href='/rss.xml' ><a>RSS</a></Link>
+            </li>
+            <li>
+              <a href='https://eskargeaux.co' target='_blank' rel='noopener noreferrer' >Portfolio</a>
+            </li>
+            <li>
+              <a href='https://github.com/skarges3' target='_blank' rel='noopener noreferrer' >Github</a>
+            </li>
+          </ul>
+        </nav>
       </footer>
     </div>
   )
