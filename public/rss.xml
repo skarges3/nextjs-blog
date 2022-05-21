@@ -5,9 +5,40 @@
         <link>https://www.karges.org</link>
         <description>Thoughts on sundry topics, including but not limited to web development, CSS, HTML, and sometimes public policy.</description>
         <language>en</language>
-        <lastBuildDate>Sat, 12 Feb 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 21 May 2022 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://www.karges.org" rel="self" type="application/rss+xml"/>
         
+    <item>
+      <guid>https://www.karges.org/posts/hard-byes-are-good-byes</guid>
+      <title>Hard Byes are Good Byes</title>
+      <description>A note before I go.</description>
+      <link>https://www.karges.org/posts/hard-byes-are-good-byes</link>
+      <pubDate>Sat, 21 May 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>I've had to say goodbye a lot in my life. To friends, to places, to homes, to jobs.</p>
+<p>Well maybe I haven't had to say goodbye any more than the average person, but enough to learn something a few times over: one should be grateful when goodbyes are hard, because the alternative is a lot worse.</p>
+<p>Today I'm saying goodbye to SMAKK Studios, where I've spent most of my waking hours for the past few years. I have left jobs before where I was just counting down the moments until the last shift was over, but this one is different. I know that's only because of the really great people I've worked, laughed, vented, drank, and karaoked with. Not to mention the awesome and rewarding work we've put out into the world.</p>
+<p>Our team helped clients <a href="http://truffleco.com" target="_blank" rel="noreferrer noopener">sell in style</a>, <a href="https://www.creativesolutions.net" target="_blank" rel="noreferrer noopener">showcase swag</a>, and even <a href="https://legacyquiltproject.mofad.org" target="_blank" rel="noreferrer noopener">honor African American culinary history</a>. In two years, my team grew from myself to 4 people. I became a manager for the first time and it made me realize how rewarding it can be to mentor younger folks.</p>
+<p>Like most people, the last few years were pretty tough for me. But being able to work on these projects with these bright, caring, talented people helped me stay sane and grounded (for the most part). I've learned so much from all of them.</p>
+<p>In two weeks I'll be starting as a Technical Lead at <a href="https://corra.com" target="_blank" rel="noreferrer noopener">Corra</a>. I'm really excited for a new challenge and a new adventure, but it's hard to say goodbye to SMAKK — and for that, I'm grateful.</p>]]></content:encoded>
+    </item>
+  
+    <item>
+      <guid>https://www.karges.org/posts/metabulk-shopify-metafield-bulk-edit-generator</guid>
+      <title>Metabulk: A Shopify Metafields Bulk Edit Link Generator</title>
+      <description>Trying to make my life easier by building my own tools.</description>
+      <link>https://www.karges.org/posts/metabulk-shopify-metafield-bulk-edit-generator</link>
+      <pubDate>Sat, 14 May 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>My day job revolves around Shopify, the ecommerce behemoth that <a href="https://twitter.com/michaelbatnick/status/1524481965897957376?s=21&#x26;t=qz_kEQsbNRlIwjOhewM0_A" target="_blank" rel="noreferrer noopener">some people think</a> is the weather vane of the post-COVID economy.</p>
+<p>But I am nor a mover, nor a shaker, so my concern is less with its macroeconomic effects and more with the platform itself. Sometimes this means tedious things like "how do I update every product's subtitle at once so I don't have to spend all day clicking around?".</p>
+<p>If you have every managed or worked on a Shopify store, you are probably familiar with how cumbersome if can be to edit metafields in a bulk way without an app.</p>
+<p>I prefer to not use an app for metafields, and instead go with Shopify's <a href="https://changelog.shopify.com/posts/metafield-improvements-metafield-lists" target="_blank" rel="noreferrer noopener">increasingly robust native metafields</a>. They are great, but Shopify currently makes it a hassle to edit these field values in bulk.</p>
+<p>Enter <a href="https://metabulk.karges.org" target="_blank" rel="noreferrer noopener">Metabulk</a>, a simple little app that helps you create a link that you can plop into a browser and see multiple metafields as columns, and all your objects (read products or collections) as rows.</p>
+<p>In addition to <a href="/posts/hello-world">trying to learn in public</a>, I'm also trying to adopt the mindset of building my own tools if I can't find a good alternative.</p>
+<p>It's super basic, and I would love for Shopify to make this obsolete, but for now I have found it very useful. I built it with my favorite stack: <a href="/posts/not-another-tailwind-post">Tailwind CSS</a> + Alpine JS. <a href="https://htmx.org/essays/locality-of-behaviour?ref=karges" target="_blank" rel="noreferrer noopener">LOB</a> FTW.</p>
+<p>Check it out and let me know if it helps you!</p>
+<p><a href="https://metabulk.karges.org" target="_blank" rel="noreferrer noopener">View the project here.</a></p>]]></content:encoded>
+    </item>
+  
     <item>
       <guid>https://www.karges.org/posts/out-of-the-headwind</guid>
       <title>Out of the Headwind</title>

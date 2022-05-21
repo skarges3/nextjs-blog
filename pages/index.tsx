@@ -22,7 +22,7 @@ export default function Home({
         <h2 className='font-bold tracking-widest uppercase'>Intro</h2>
         <p>Hi. I&rsquo;m Spencer Karges.</p>
         <p>I&rsquo;ve been tinkering on the web for nearly a decade now, but still have a lot to learn.</p>
-        <p>Currently I work at <a href='https://smakkstudios.com' target='_blank' rel='noopener noreferrer' >SMAKK Studios</a> as Senior Developer.</p>
+        <p>Currently I work at <a href='https://corra.com' target='_blank' rel='noopener noreferrer' >Corra</a> as Technical Lead. Formerly <a href='https://smakkstudios.com' target='_blank' rel='noopener noreferrer' >SMAKK Studios</a>.</p>
       </section>
       <section className='my-12 space-y-4'>
         <h2 className='font-bold tracking-widest uppercase'>Recent Posts</h2>
