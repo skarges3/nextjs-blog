@@ -31,6 +31,7 @@ export default function Layout({
         <meta name="og:title" content={BLOG_TITLE} />
         <meta name="twitter:card" content="summary_large_image" />
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+        <script defer data-domain="karges.org" src="https://plausible.io/js/plausible.js"></script>
       </Head>
       <header className='mb-8 text-center'>
         {home ? (
