@@ -1,5 +1,7 @@
 ---
 title: 'Stop Using Themekit for Shopify Theme Development'
+date: '2022-10-01'
+excerpt: 'There is a better way.'
 ---
 
 # Stop Using Themekit for Shopify Theme Development
