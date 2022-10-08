@@ -4,8 +4,6 @@ date: '2022-10-01'
 excerpt: 'There is a better way.'
 ---
 
-# Stop Using Themekit for Shopify Theme Development
-
 Having worked with Shopify for the past 5 or 6 years, I can confidently say that things are changing at a faster pace than ever.
 
 The sheer number of releases and updates from the Shopify team have been hard to keep up with, even for someone who subscribes to their changelog via RSS.
@@ -86,4 +84,4 @@ The `pull` and `push` commands are the bread and butter and really easy to use.
 
 The Shopify CLI might not seem like a big departure from Themekit if you haven't tried it yet, but I would encourage you to take advantage of the new tools and workflows. It has made my life a lot easier and — maybe most importantly — made it a lot smoother to work with other developers when we're all using the same modern tools.
 
-Happy theming <3 
+Happy theming ❤️
