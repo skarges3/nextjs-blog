@@ -7,16 +7,18 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fontsource/petrona": "^4.5.10",
+    "@fontsource/space-grotesk": "^4.5.10",
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.5.1",
     "date-fns": "^2.28.0",
     "gray-matter": "^4.0.3",
-    "next": "latest",
+    "next": "^13.1.1",
     "nodemailer": "^6.7.2",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^7.2.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-external-links": "^1.0.1",
     "rehype-figure": "^1.0.1",
@@ -31,11 +33,11 @@
   "devDependencies": {
     "@types/node": "^17.0.13",
     "@types/react": "^17.0.38",
-    "autoprefixer": "^10.4.2",
+    "autoprefixer": "^10.4.13",
     "eslint": "8.8.0",
-    "eslint-config-next": "12.0.9",
-    "postcss": "^8.4.5",
-    "tailwindcss": "^3.0.17",
+    "eslint-config-next": "^13.1.1",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4",
     "typescript": "^4.5.5"
   }
 }

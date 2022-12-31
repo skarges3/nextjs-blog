@@ -3,11 +3,67 @@
       <channel>
         <title>From the Desk of Spencer Karges</title>
         <link>https://www.karges.org</link>
-        <description>Thoughts on sundry topics, including but not limited to web development, CSS, HTML, and sometimes public policy.</description>
+        <description>Thoughts on sundry topics, including but not limited to web development, CSS, HTML, and sometimes public policy?</description>
         <language>en</language>
-        <lastBuildDate>Sat, 21 May 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 01 Oct 2022 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://www.karges.org" rel="self" type="application/rss+xml"/>
         
+    <item>
+      <guid>https://www.karges.org/posts/stop-using-themekit-for-shopify-theme-development</guid>
+      <title>Stop Using Themekit for Shopify Theme Development</title>
+      <description>There is a better way.</description>
+      <link>https://www.karges.org/posts/stop-using-themekit-for-shopify-theme-development</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Having worked with Shopify for the past 5 or 6 years, I can confidently say that things are changing at a faster pace than ever.</p>
+<p>The sheer number of releases and updates from the Shopify team have been hard to keep up with, even for someone who subscribes to their changelog via RSS.</p>
+<p>So I say the following with no judgment: you should really try and keep up. Yes, there is a cost to changing your ways, but there is also a cost to sticking with them.</p>
+<p>A glaring example of this is Shopify Themekit vs Shopify CLI. Both tools are ostensibly for developers to be able to work with hosted themes from their local machine via Command Line, but the newer tool solves many problems that developers might not even know they have.</p>
+<h2 id="why-themekit-persists"><a aria-hidden="true" tabindex="-1" href="#why-themekit-persists"><span class="icon icon-link"></span></a>Why Themekit Persists</h2>
+<p>Since the release of Shopify CLI 2.0 (which allows for theme development) in June 2021, there has been a slow adoption of it in place of Themekit. Partially, I think this slow adoption is just inertia and things will eventually change in time. But one headwind against change is the sheer amount of shovel-blog writing on "How to use Themekit to build Shopify Themes" style posts and YouTube tutorials. They are everywhere, and when people Google for advice they are more likely — even today — to come across a Themekit-based solution.</p>
+<p>Oddly enough, Shopify themselves are a little reluctant to just give people direct advice on making the switch. Their current Themekit documentation does not mark the tool as deprecated, nor does it even attempt to dissuade developers from using it:</p>
+<blockquote>
+<p>Choosing between Shopify CLI and Theme Kit: Shopify CLI replaces Theme Kit for most Shopify theme development tasks. You should use Shopify CLI if you're working on Online Store 2.0 themes. You should use Theme Kit instead of Shopify CLI only if you're working on older themes.
+Source: https://shopify.dev/themes/tools/theme-kit</p>
+</blockquote>
+<p>I think this is bad advice, and I will lay out my reasons for it below.</p>
+<h2 id="the-issues-with-themekit"><a aria-hidden="true" tabindex="-1" href="#the-issues-with-themekit"><span class="icon icon-link"></span></a>The issues with Themekit</h2>
+<p>Themekit has been around for a long time, and was the original way I learned to build and manage themes. The <code>theme watch</code> command felt like magic the first time I ran it. I'm afraid the fun stops there though.</p>
+<h3 id="1-themekit-often-uses-private-apps-for-authentication"><a aria-hidden="true" tabindex="-1" href="#1-themekit-often-uses-private-apps-for-authentication"><span class="icon icon-link"></span></a>1. Themekit often uses private apps for authentication</h3>
+<p>Private apps are now deprecated but many still exist because they were grandfathered in on stores that had access to them previously.</p>
+<p>Private apps allow for simple HTTPS authentication via app name and password. This is generally just a bad idea because it could give someone with the credentials access to your entire store. I've defeinitely never had to speak to a lawyer because a hacker found the keys and had all order history from all customers ever... Definitely not me...</p>
+<p>I have seen many, many stores where the only reason private apps have stuck around is because of developers' need for Themekit access.</p>
+<p>There is an alternative for this called <a href="https://apps.shopify.com/theme-kit-access" target="_blank" rel="noreferrer noopener">Themekit Access</a> which is an app on the Shopify App Store. This definitely alleviates the security concern, but there are still a lot more reasons to leave Themekit behind.</p>
+<h2 id="2-themekit-encourages-partial-syncing"><a aria-hidden="true" tabindex="-1" href="#2-themekit-encourages-partial-syncing"><span class="icon icon-link"></span></a>2. Themekit encourages partial syncing</h2>
+<p>This one is my pet peeve. The <code>theme watch</code> command is probably the most popular command by a factor of 10. It's the easiest way, as a developer, to just start making changes and getting visual feedback.</p>
+<p>The problem is that once you are in <code>watch</code> mode, only the files you change and save are watched and synced. This means that if you are starting from a code base that is not 100% synced to the theme you are working with in Shopify, you will be <code>watch</code>-ing  for changes to your local files, but other files in your codebase are not in sync with the hosted theme and you are not developing against your real environment.</p>
+<p>This causes much confusion and often results in a developer looking at their codebase and wondering why the theme they are previewing on Shopify isn't working as expected.</p>
+<h2 id="enter-cli"><a aria-hidden="true" tabindex="-1" href="#enter-cli"><span class="icon icon-link"></span></a>Enter CLI</h2>
+<p>The Shopify CLI on the other hand, uses the <code>shopify theme serve</code> command which brings similar benefits as <code>theme watch</code>. The main difference here is that as soon as you <code>serve</code> you are immediate syncing the <strong>entire</strong> local theme directory with the hosted dev theme. Nothing is out of sync.</p>
+<h3 id="other-benefits"><a aria-hidden="true" tabindex="-1" href="#other-benefits"><span class="icon icon-link"></span></a>Other benefits</h3>
+<h4 id="1-local-development"><a aria-hidden="true" tabindex="-1" href="#1-local-development"><span class="icon icon-link"></span></a>1. Local development</h4>
+<p>All Shopify themes are hosted, so there is no real local environment, but Shopify CLI gets as close as possible by proxying the dev theme via your local IP (e.g. 127.0.0.1).</p>
+<p>This means live reloading typically works really well.</p>
+<h4 id="2-syncing-with-the-theme-editor"><a aria-hidden="true" tabindex="-1" href="#2-syncing-with-the-theme-editor"><span class="icon icon-link"></span></a>2. Syncing with the Theme Editor</h4>
+<p>The Theme Editor is even more crucial in Shopify 2.0 themes. Testing it's settings and playing with configurations is a daily task for most theme developers. The <code>--theme-editor-sync</code> flag on the <code>shopify theme serve</code> command allows for a really seamless workflow where you can make editor changes via the Customizer and have those changes automatically synced to your local code base.</p>
+<h4 id="3-better-auth"><a aria-hidden="true" tabindex="-1" href="#3-better-auth"><span class="icon icon-link"></span></a>3. Better auth</h4>
+<p>Shopify CLI does away with Private apps and Themekit Access and instead just allows for logging in via web OAuth. It's a lot safer and lot easier.</p>
+<h4 id="4-pushing-and-pulling"><a aria-hidden="true" tabindex="-1" href="#4-pushing-and-pulling"><span class="icon icon-link"></span></a>4. Pushing and Pulling</h4>
+<p>Here's a common workflow for me:</p>
+<ol>
+<li>Create a new theme via the Shopify admin, and name it something appropriate like <code>Sticky Add-to-Cart Button</code></li>
+<li>Create a new branch in my local off of <code>master</code> called <code>feature/sticky-atc</code> for example</li>
+<li>Immediately run <code>shopify theme pull</code> from the <strong>Live Theme</strong> and check for any changes in git. There should be <strong>zero</strong>, and that gives me confidence that I am in sync with the published theme before adding new changes. Or it tells me something has gone wrong and I should get in sync before moving forward.</li>
+<li>Run <code>shopify theme push</code>, and push to the new theme I made.</li>
+<li>Run <code>shopify theme serve --theme-editor-sync</code> and do my work.</li>
+<li>Once I am done, or am ready for testing I will commit to my repo and <code>push</code> to my named theme again.</li>
+</ol>
+<p>Now I have a fully-in-sync unpublished theme that contains only the changes related to my new feature.</p>
+<p>The <code>pull</code> and <code>push</code> commands are the bread and butter and really easy to use.</p>
+<h2 id="conclusion"><a aria-hidden="true" tabindex="-1" href="#conclusion"><span class="icon icon-link"></span></a>Conclusion</h2>
+<p>The Shopify CLI might not seem like a big departure from Themekit if you haven't tried it yet, but I would encourage you to take advantage of the new tools and workflows. It has made my life a lot easier and — maybe most importantly — made it a lot smoother to work with other developers when we're all using the same modern tools.</p>
+<p>Happy theming ❤️</p>]]></content:encoded>
+    </item>
+  
     <item>
       <guid>https://www.karges.org/posts/hard-byes-are-good-byes</guid>
       <title>Hard Byes are Good Byes</title>
