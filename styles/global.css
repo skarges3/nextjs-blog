@@ -1,7 +1,7 @@
 @tailwind base;
 @layer base {
   html {
-    @apply bg-stone-200 dark:bg-stone-900 dark:text-stone-100 text-stone-900 scroll-smooth
+    @apply bg-slate-50 dark:bg-slate-900 dark:text-slate-100 text-slate-900 scroll-smooth
   }
   summary {
     cursor: pointer;
@@ -14,11 +14,11 @@
   }
 
   a {
-    @apply text-orange-800 underline underline-offset-1 dark:text-orange-500
+    @apply text-lime-800 underline underline-offset-2 decoration-1 dark:text-lime-400
   }
 
   li::marker {
-    @apply text-orange-800 dark:text-orange-500
+    @apply text-lime-800 dark:text-lime-400
   }
 }
 @tailwind components;

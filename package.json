@@ -7,6 +7,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fontsource/petrona": "^4.5.10",
+    "@fontsource/space-grotesk": "^4.5.10",
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.5.1",
     "date-fns": "^2.28.0",

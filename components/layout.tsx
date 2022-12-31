@@ -2,7 +2,31 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BLOG_TITLE, BLOG_SUBTITLE } from '../lib/constants'
-const profilePic = '/images/profile.jpeg'
+const profilePic = '/images/Profile-Illustration.JPG'
+const sassyPic = '/images/me-gameboy.jpg'
+
+function ProfilePicture() {
+  return (
+    <div className='group p-1'>
+     <Image
+        priority
+        className='rounded-full mx-auto w-32 h-32 object-cover group-hover:hidden'
+        src={profilePic}
+        height={144}
+        width={144}
+        alt="Profile Pic, Illustration of me, my partner Sarah, and our cat Theo."
+      />
+     <Image
+        priority
+        className='rounded-full mx-auto w-32 h-32 object-cover hidden group-hover:block'
+        src={sassyPic}
+        height={144}
+        width={144}
+        alt="Profile Pic, Me looking up from playing gameboy, Age 8?"
+      />
+    </div>
+  )
+}
 
 export default function Layout({
   children,
@@ -30,39 +54,22 @@ export default function Layout({
         />
         <meta name="og:title" content={BLOG_TITLE} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
         <script defer data-domain="karges.org" src="https://plausible.io/js/plausible.js"></script>
       </Head>
       <header className='mb-8 text-center'>
         {home ? (
           <>
-            <Image
-              priority
-              className='rounded-full'
-              src={profilePic}
-              height={144}
-              width={144}
-              alt="Profile Pic, Me Smiling"
-            />
+            <ProfilePicture/>
             <h1>{BLOG_TITLE}</h1>
           </>
         ) : (
           <>
             <Link href="/">
-              <a>
-                <Image
-                  priority
-                  className='rounded-full'
-                  src={profilePic}
-                  height={108}
-                  width={108}
-                  alt="Profile Pic, Me Smiling"
-                />
-              </a>
+              <ProfilePicture/>
             </Link>
             <h2>
               <Link href="/">
-                <a>{BLOG_TITLE}</a>
+                {BLOG_TITLE}
               </Link>
             </h2>
           </>
@@ -72,7 +79,7 @@ export default function Layout({
       {!home && (
         <div className='py-4 my-4'>
           <Link href="/">
-            <a>← Back to home</a>
+            ← Back to home
           </Link>
         </div>
       )}
@@ -80,7 +87,7 @@ export default function Layout({
         <nav>
           <ul className='flex gap-4 text-sm'>
             <li>
-              <Link href='/rss.xml' ><a>RSS</a></Link>
+              <Link href='/rss.xml' >RSS</Link>
             </li>
             <li>
               <a href='https://eskargeaux.co' target='_blank' rel='noopener noreferrer' >Portfolio</a>
@@ -92,5 +99,5 @@ export default function Layout({
         </nav>
       </footer>
     </div>
-  )
+  );
 }

@@ -23,9 +23,9 @@ export default function Post({
           content={postData.excerpt}
         />
       </Head>
-      <article className='prose-stone dark:prose-invert prose-ul:list-disc prose-li:marker:text-orange-800 mx-auto my-12 prose prose-lg'>
+      <article className='prose-slate dark:prose-invert prose-ul:list-disc prose-li:marker:text-lime-800 dark:prose-li:marker:text-lime-400 mx-auto my-12 prose prose-lg prose-a:text-lime-800 prose-a:underline prose-a:underline-offset-2 prose-a:decoration-1 dark:prose-a:text-lime-400'>
         <h1 className='min-w-0 font-black break-words'>{postData.title}</h1>
-        <p>
+        <p className='block text-xs uppercase tracking-widest opacity-80'>
           <Date dateString={postData.date} />
         </p>
         <div className='' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
