@@ -5,9 +5,38 @@
         <link>https://www.karges.org</link>
         <description>Thoughts on sundry topics, including but not limited to web development, CSS, HTML, and sometimes public policy?</description>
         <language>en</language>
-        <lastBuildDate>Sat, 01 Oct 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 27 Aug 2023 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://www.karges.org" rel="self" type="application/rss+xml"/>
         
+    <item>
+      <guid>https://www.karges.org/posts/the-tailwind-backlash-has-begun</guid>
+      <title>The Tailwind Backlash</title>
+      <description>I see the tailwind backlash has begun.</description>
+      <link>https://www.karges.org/posts/the-tailwind-backlash-has-begun</link>
+      <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>It's inevitable that when a tool becomes popular, maybe even ubiquitous, a <em>critical</em> mass of <em>critical</em> folks will start to form.</p>
+<p>We've reached what I am guessing is the Trough of Disillusionment stage of the <a href="https://en.wikipedia.org/wiki/Gartner_hype_cycle" target="_blank" rel="noreferrer noopener">Hype Cycle</a>. Enough mainstream players (framework authors, larger development agencies, etc.) have embraced it that there is now a decent number of folks who now have exposure to it whether they like it or not. And some portion of those users are not happy with their experience.</p>
+<p>In other words, the backlash seems healthy, natural, and entirely predictable.</p>
+<p>However, the tone of <a href="https://thathtml.blog/2023/08/tailwind-death-of-craftsmanship/" target="_blank" rel="noreferrer noopener">some</a> <a href="https://medium.com/codex/tailwindui-and-heres-the-real-failwind-scam-b74357371ca5" target="_blank" rel="noreferrer noopener">of</a> <a href="https://pdx.su/blog/2023-07-26-tailwind-and-the-death-of-craftsmanship/" target="_blank" rel="noreferrer noopener">these</a> <a href="https://thoughtbot.com/blog/tailwind-and-the-femininity-of-css" target="_blank" rel="noreferrer noopener">posts</a> has risen to a nearly quasi-religious fervency.</p>
+<p>For example, I don't agree with the take that the popularity of Tailwind is:</p>
+<ul>
+<li>a harbinger of the "death of craftsmanship" (<a href="https://pdx.su/blog/2023-07-26-tailwind-and-the-death-of-craftsmanship/" target="_blank" rel="noreferrer noopener">Tailwind, and the death of web craftsmanship</a>)</li>
+<li>rooted in a sexist belittling of the "femininity of CSS" (<a href="https://thoughtbot.com/blog/tailwind-and-the-femininity-of-css" target="_blank" rel="noreferrer noopener">Tailwind and the femininity of CSS</a>)</li>
+<li>"built out of basic ignorance of using HTML and CSS properly" (<a href="https://medium.com/codex/tailwindui-and-heres-the-real-failwind-scam-b74357371ca5" target="_blank" rel="noreferrer noopener">TailwindUI, And Here’s The Real Failwind Scam</a>)</li>
+</ul>
+<p>Take a few moments with these posts and you will notice the intensely defensive tone that implies a real anger or fear or both.</p>
+<p>Consistent among them is what I view as an aesthetic preference being confused for a moral, ethical, or technical transgression.</p>
+<h2 id="aesthetics-vs-ethics"><a aria-hidden="true" tabindex="-1" href="#aesthetics-vs-ethics"><span class="icon icon-link"></span></a>Aesthetics vs. Ethics</h2>
+<p>This type of backlash against something that has broken into the mainstream is a pretty common phenomenom.</p>
+<p>A good example of this (and please hear me that this is not <em>equivalent</em> to the Tailwind debate) is <a href="https://www.vox.com/22297328/affordable-housing-nimby-housing-prices-rising-poll-data-for-progress" target="_blank" rel="noreferrer noopener">NIMBYism</a>. If you're unfamiliar with the phenomenon, just look out for the phrase "protecting the character of the neighborhood". Even though allowing for new housing actually decreases the total rate of housing displacement, NIMBYs like to prevent new developments because they want their neighborhood to stay the same. But it's not a good enough reason to say "I don't like change", so they rationalize with bogus claims rooted in "enviromentalism" (spoiler: higher density is better for the environment) or "protecting neighborhood character" (spoiler: this means keep new, different people out).</p>
+<p>Read <a href="https://twitter.com/JerusalemDemsas" target="_blank" rel="noreferrer noopener">Jerusalem Demsas</a> for more on this if you're not convinced by this short tangent.</p>
+<p>But my larger point is that sometimes we trick ourselves into thinking our dislike of something has some noble purpose, when often it comes from a sense of asethetic "ick".</p>
+<h2 id="its-not-like-tailwind-is-perfect"><a aria-hidden="true" tabindex="-1" href="#its-not-like-tailwind-is-perfect"><span class="icon icon-link"></span></a>It's not like Tailwind is perfect</h2>
+<p>As <a href="/posts/not-another-tailwind-post">I've written about before</a>, there are most certainly pros and cons to Tailwind. I find that for my needs and for the projects I work on day-to-day it solves more problems than it creates.</p>
+<p>The drawbacks that other folks mention just don't come into play for me regularly, so the quality-of-life improvements are worth it for me and my team.</p>
+<p>But that's the crux of it, isn't it? Tailwind is a <em>tool</em>. Use it if it's helpful; don't police its use by other people.</p>]]></content:encoded>
+    </item>
+  
     <item>
       <guid>https://www.karges.org/posts/stop-using-themekit-for-shopify-theme-development</guid>
       <title>Stop Using Themekit for Shopify Theme Development</title>

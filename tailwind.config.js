@@ -9,6 +9,16 @@ module.exports = {
       serif: ['Petrona', 'serif'],
     },
     extend: {
+      keyframes: {
+        header: {
+          "0%": {
+            "--bit": 0
+          },
+          "100%": {
+            "--bit": 1
+          }
+        }
+      }
     },
   },
   plugins: [
