@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { BLOG_TITLE, BLOG_SUBTITLE } from "../lib/constants";
 const profilePic = "/images/Profile-Illustration.JPG";
 const sassyPic = "/images/me-gameboy.jpg";
+const previewImage = "/images/preview_image.jpg";
 
 function ProfilePicture() {
   return (
@@ -112,9 +113,7 @@ export default function Layout({
         <meta name="description" content={BLOG_SUBTITLE} />
         <meta
           property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            BLOG_TITLE
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          content={`https://www.karges.org/${previewImage}`}
         />
         <meta name="og:title" content={BLOG_TITLE} />
         <meta name="twitter:card" content="summary_large_image" />
