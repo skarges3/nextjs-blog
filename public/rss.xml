@@ -5,9 +5,26 @@
         <link>https://www.karges.org</link>
         <description>Thoughts on sundry topics, including but not limited to web development, CSS, HTML, and sometimes public policy?</description>
         <language>en</language>
-        <lastBuildDate>Sun, 27 Aug 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 01 Jun 2025 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://www.karges.org" rel="self" type="application/rss+xml"/>
         
+    <item>
+      <guid>https://www.karges.org/posts/quick-life-update</guid>
+      <title>Hello Again</title>
+      <description>Continuing the grand tradition of personal blogs that get resurrected every 2 years.</description>
+      <link>https://www.karges.org/posts/quick-life-update</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>I took a look at this site a couple of weeks ago and saw that my "current employment" was almost 9 months out of date so I figured I should actually make a post.</p>
+<p>This time last year I was about 6 months into a new job at a new agency, and starting to wonder why I was still there.</p>
+<p>I felt that the work I was doing was middling at best, and not very fulfilling.</p>
+<p>I started taking lots of interviews and speaking with recruiters. Eventually one of them reached out with what sounded like something actually different: an in-house role at an established brand, looking to build something on Shopify from the ground up.</p>
+<p>I was really intrigued because it was still a remote gig, but in-house and with a nice little pay bump.</p>
+<p>The only catch was that my title was technically a demotion from Tech Lead to Senior Developer. In all honesty I didn't think anything of it, and in practice it has been such a relief. I no longer have to deal with internal politics or large planning calls. I just build stuff.</p>
+<p>Speaking of building stuff. Part of the reason I've been so quiet here is that once I took that job last September, I've been working hard on launching the re-build of watchesofswitzerland.com.</p>
+<p>I'm really proud of the work my small team has done in just 7 or 8 months. So much more to do still but we are really happy with the performance, accessibility, and design polish.</p>
+<p>We've got 3 more sites lined up to launch this year so I'm headed back to the grindstone. See you then :)</p>]]></content:encoded>
+    </item>
+  
     <item>
       <guid>https://www.karges.org/posts/the-tailwind-backlash-has-begun</guid>
       <title>The Tailwind Backlash</title>

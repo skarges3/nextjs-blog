@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { usePathname } from 'next/navigation'
 import Link from "next/link";
 import React from "react";
 import { useInView } from "react-intersection-observer";
@@ -34,8 +35,33 @@ function ProfilePicture() {
   );
 }
 
-const StickyNav = (home) => {
-  const { ref, inView, entry } = useInView({
+const headerContent = (inView, revealClasses) => {
+  return (
+    <>
+      <span
+        className={`-left-1 md:-left-2 ${revealClasses} ${
+          inView ? "opacity-100" : "opacity-20"
+        }`}
+      >
+        Spencer
+        <br />
+        Karges
+      </span>
+      <span
+        className={`-right-1 md:-right-2 ${revealClasses} ${
+          inView ? "opacity-100" : "opacity-20"
+        }`}
+      >
+        Developer
+        <br />
+        &amp; Designer
+      </span>
+    </>
+  );
+}
+
+const StickyNav = () => {
+  const { ref, inView } = useInView({
     /* Optional options */
     threshold: 0,
     rootMargin: "-100px",
@@ -47,39 +73,15 @@ const StickyNav = (home) => {
   return (
     <div ref={ref}>
       <header className="overflow-hidden flex align-center justify-center">
-        {/* Screen Reader ignore this one: */}
-        {home ? (
-          <span
-            className={`-left-1 md:-left-2 ${revealClasses} ${
-              inView ? "opacity-100" : "opacity-20"
-            }`}
-            aria-hidden="true"
-          >
-            Spencer
-            <br />
-            Karges
-          </span>
-        ) : (
-          <h1
-            className={`-left-1 md:-left-2 ${revealClasses} ${
-              inView ? "opacity-100" : "opacity-20"
-            }`}
-          >
-            Spencer
-            <br />
-            Karges
+        {usePathname() === "/" ? (
+          <h1 className="overflow-hidden flex align-center justify-center">
+            {headerContent(inView, revealClasses)}
           </h1>
+        ) : (
+          <div className="overflow-hidden flex align-center justify-center">
+            {headerContent(inView, revealClasses)}
+          </div>
         )}
-        <p
-          className={`-right-1 md:-right-2 ${revealClasses} ${
-            inView ? "opacity-100" : "opacity-20"
-          }`}
-          arua-hidden={home ? "true" : "false"}
-        >
-          Developer
-          <br />
-          &amp;Designer
-        </p>
         <div className="p-4">
           <Link href="/" aria-label="Back to Home" className="hover:text-white">
             <ProfilePicture />
@@ -91,15 +93,12 @@ const StickyNav = (home) => {
 };
 
 export default function Layout({
-  children,
-  home,
+  children
 }: {
-  children: React.ReactNode;
-  home?: boolean;
+  children: React.ReactNode
 }) {
   return (
     <div>
-      <div className="overflow-hidden absolute -top-3 -left-2"></div>
       <a
         className="focus:not-sr-only focus:absolute focus:p-4 font-bold text-black no-underline bg-white sr-only z-10"
         href="#content"
@@ -123,13 +122,13 @@ export default function Layout({
           src="https://plausible.io/js/plausible.js"
         ></script>
       </Head>
-      <StickyNav home={home} />
+      <StickyNav/>
       <main
         id="content"
         className="max-w-prose px-4 mx-auto my-12 font-sans text-lg"
       >
         {children}
-        {!home && (
+        {usePathname() !== "/" && (
           <div className="py-4 my-4">
             <Link href="/">← Back to home</Link>
           </div>
